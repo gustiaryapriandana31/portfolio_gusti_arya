@@ -14,7 +14,7 @@ class ContactController extends Controller {
   public function store(Request $request) {
     $validatedContact = $request->validate([
         "email" => "required|email:dns",
-        "nama" => "required|min:10|max:255",
+        "nama" => "required|min:3|max:255",
         "nohp" => "required|numeric",
         "pesan" => "required"
     ],
